@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Cube.TemperatureConversion.UI.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+</head>
+<body>
+
+    <header class="site-header">
+
+        <div class="title-area container-fluid">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <p class="site-title">
+                        <a href="https://www.cube.global/">CUBE Tech Test</a>
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h1>Temperature Conversion Tech Test</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="site-header">
+                    &copy; 2023 - Scott thomas
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

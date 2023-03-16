@@ -1,0 +1,59 @@
+﻿@using Cube.TemperatureConversion.UI.Enums
+@using Cube.TemperatureConversion.UI.Models
+@model TemperatureUnitConversion
+@{
+    ViewData["Title"] = "Cube | TemperatureConversion";
+}
+<form>
+        
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
+            <div class="col">
+
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Convert:</label>
+                    <div class="col-sm-2">
+                        <input asp-for="FromValue" class="form-control">
+                    </div>
+                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">From:</label>
+                    <div class="col">
+                        @foreach (var temp in Enum.GetValues(typeof(TemperatureUnit)))
+                        {
+                            @Html.RadioButtonFor(x => x.FromUnit, temp) @:&nbsp; @temp <br />
+                        }
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">To: </label>
+                    <div class="col">
+                        @foreach (var temp in Enum.GetValues(typeof(TemperatureUnit)))
+                        {
+                            @Html.RadioButtonFor(x => x.ToUnit, temp) @:&nbsp; @temp <br />
+                        }
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Result: </label>
+                    <div class="col" id="result">
+                        <label id="result"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+
+                    <div class="col offset-sm-2">
+                        <button class="btn btn-primary" id="btnSubmit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                &nbsp;
+            </div>
+        </div>
+
+</form>
