@@ -11,6 +11,11 @@ The mvc app is basic as the solution is supposed to be an MVP.  It uses ajax to 
 
 An example unit test project accompanies the solution but not all unit tests have been completed.
 
+## Running the Solution
+Both the API and UI solution need to be running in order to test locally, normally I would set multiple start up projects in visual studio and the solution file would reflect that.
+
+You can not do this in a solution file from a mac, or at least I've not discovered the way to do that, so depending on your machine and setup, please ensure both the api and ui projects are built and running in order to test from a browser.
+
 ## Comments
 Firstly I must point out that I am using a mac for development which is completely new to me.  I have to say I'm not a fan and have found it has slowed me down considerably compared to developing on a windows machine.
 Secondly, the biggest take away from this exercise is just how rusty my frontend work is as more recently I have been working on middle / back end api's and architecture designs.
